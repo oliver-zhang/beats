@@ -18,6 +18,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/elastic/beats/filebeat/cmd"
@@ -33,6 +34,7 @@ import (
 // determine where in each file to restart a harvester.
 func main() {
 	if err := cmd.RootCmd.Execute(); err != nil {
+		fmt.Print("test")
 		os.Exit(1)
 	}
 }
